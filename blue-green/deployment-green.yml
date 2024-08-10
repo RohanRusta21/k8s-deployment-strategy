@@ -18,6 +18,6 @@ spec:
     spec:
       containers:
       - name: green-app
-        image: nginx:alpine
+        image: argoproj/rollouts-demo:green
         ports:
-        - containerPort: 80
+        - containerPort: 8080
