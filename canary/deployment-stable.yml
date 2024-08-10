@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: stable-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: stable-app
+      version: stable
+  template:
+    metadata:
+      labels:
+        app: stable-app
+        version: stable
+    spec:
+      containers:
+      - name: stable-app
+        image: nginx:alpine
+        ports:
+        - containerPort: 80
