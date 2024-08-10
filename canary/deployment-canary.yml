@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: canary-app
-        image: nginx:alpine
+        image: ttl.sh/canary-app:1d
         ports:
         - containerPort: 80
